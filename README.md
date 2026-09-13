@@ -27,6 +27,7 @@ Raw Customer Data
     Spark ETL
 
        ↓
+
 Feature Engineering
 
        ↓
@@ -485,8 +486,6 @@ Chetana Muddulur
 
 Computer Science & Engineering
 
-JSS Academy of Technical Education, Bengaluru
-
 GitHub: Chetana2502
 
 ## ⭐ Highlights
@@ -511,5 +510,3 @@ GitHub: Chetana2502
 ✓ Exploratory Data Analysis
 
 ✓ Business-oriented insights
-
-**
