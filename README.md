@@ -1,12 +1,12 @@
-**# Subscription Churn Analysis**
+# Subscription Churn Analysis
 
 An end-to-end **Big Data Analytics pipeline for subscription customer churn analysis and prediction**, integrating **Hadoop HDFS, MapReduce, Apache Spark, PySpark, Spark MLlib, and Python-based visualization**.
 
 The project focuses on identifying customer churn patterns, preparing large-scale customer data for analysis, and building a scalable machine learning model to predict customers at risk of churning.
 
-**---**
+---
 
-**## 📌 Overview**
+## 📌 Overview
 
 Customer churn is a major challenge for subscription-based businesses such as telecom providers, streaming platforms, SaaS products, and other digital services.
 
@@ -27,8 +27,8 @@ Raw Customer Data
     Spark ETL
 
        ↓
+Feature Engineering
 
-- Feature Engineering
        ↓
 
    Spark MLlib
@@ -43,7 +43,7 @@ Visualization & Insights
 
 The pipeline combines distributed storage, batch processing, scalable ETL, machine learning, and exploratory analysis to understand customer behavior and support data-driven retention strategies.
 
-**## 🎯 Objectives**
+## 🎯 Objectives
 
 \- Store raw customer churn data using Hadoop HDFS
 
@@ -65,7 +65,7 @@ The pipeline combines distributed storage, batch processing, scalable ETL, machi
 
 \- Generate insights that can support customer retention strategies
 
-**## 🛠️ Technologies Used**
+## 🛠️ Technologies Used
 
 | Category | Technologies |
 |---|---|
@@ -79,7 +79,7 @@ The pipeline combines distributed storage, batch processing, scalable ETL, machi
 | Environment | Ubuntu / WSL2 |
 | Development | Jupyter Notebook |
 
-**## 🏗️ Architecture**
+## 🏗️ Architecture
 
 The project follows the architecture:
 
@@ -181,7 +181,7 @@ The project follows the architecture:
 
                     └──────────────────┘
 
-**## 📂 Data**
+## 📂 Data
 
 The dataset contains customer-level subscription information including:
 
@@ -210,7 +210,7 @@ The dataset contains customer-level subscription information including:
 \- Churn
 
 The data is processed through the Hadoop and Spark ecosystem before being used for machine learning.
-## 🔹 1. Hadoop HDFS
+### 🔹 1. Hadoop HDFS
 Hadoop HDFS is used as the distributed storage layer for the raw customer datasets.
 
 The project organizes the data into raw and processed directories:
@@ -230,7 +230,7 @@ The HDFS contents can then be verified using:
 ```bash
 hdfs dfs -ls /data/churn/raw
 ```
-## 🔹 2. Hadoop MapReduce
+### 🔹 2. Hadoop MapReduce
 Hadoop MapReduce is used for batch aggregation of churn statistics across subscription types.
 
 The mapper produces key-value pairs in the form:
@@ -251,7 +251,7 @@ Premium   146878    83173
 Standard  149128    83616
 
 This stage provides an initial distributed analysis of churn behavior before the Spark processing stage.
-## 🔹 3. Spark ETL
+### 🔹 3. Spark ETL
 Apache Spark is used for data cleaning, transformation, and feature engineering.
 
 ETL operations include:
@@ -272,7 +272,7 @@ spark.read.parquet(
 )
 
 Using Parquet provides an optimized format for downstream distributed processing.
-## 🔹 4. Machine Learning
+### 🔹 4. Machine Learning
 A Gradient Boosted Tree (GBT) Classifier is trained using Spark MLlib.
 
 The machine learning pipeline consists of:
@@ -294,6 +294,7 @@ Prediction
        ↓
 
 Model Evaluation
+
 ## Features
 The model uses customer attributes such as:
 
@@ -310,6 +311,7 @@ The model generates:
 Churn probability
 
 Binary churn prediction
+
 ## 📈 Model Performance
 The model achieved the following validation results:
 
@@ -322,6 +324,7 @@ The model achieved the following validation results:
 | ROC-AUC | 99.99% |
 
 The project also evaluates the model using a confusion matrix and ROC curve.
+
 ## 📊 Exploratory Data Analysis
 Python-based exploratory analysis was performed to understand customer churn behavior.
 
@@ -338,18 +341,20 @@ Visualizations include:
 - Confusion Matrix
 - ROC Curve
 These visualizations help identify customer segments and behavioral patterns associated with churn.
+
 ## 💡 Key Insights
 The analysis highlights several important churn patterns:
-## Monthly Contracts
+### Monthly Contracts
 Customers with monthly contracts show substantially higher churn compared with customers on annual and quarterly contracts.
-## Subscription Type
+### Subscription Type
 Basic-tier customers exhibit the highest churn count, while premium customers show comparatively lower churn.
-## Support Interactions
+### Support Interactions
 Frequent support calls are associated with increased churn risk and may indicate customer dissatisfaction or unresolved issues.
-## Payment Delays
+### Payment Delays
 Payment behavior is an important factor in understanding customer churn.
-## Customer Engagement
+### Customer Engagement
 Usage frequency and customer activity provide useful signals for identifying customers who may be at higher risk of churn.
+
 ## 💼 Business Recommendations
 The analysis can support retention strategies such as:
 
@@ -361,6 +366,7 @@ Identifying high-risk customers using churn probabilities
 - Investigating customers with frequent support interactions
 - Addressing payment-related issues
 - Designing targeted retention campaigns for high-risk customer segments
+
 ## 📁 Project Structure
 
 ```text
@@ -394,6 +400,7 @@ subscription-churn-analysis/
 
 
 The repository structure contains the available project artifacts. The Hadoop MapReduce implementation was executed as part of the project workflow, but the mapper/reducer source files are not included in this repository.
+
 ## ⚙️ Requirements
 Python 3.x
 
@@ -408,8 +415,10 @@ PySpark
 Jupyter Notebook
 
 Ubuntu / WSL2
+
 ## Python Dependencies
 pip install pandas numpy matplotlib seaborn pyspark jupyter
+
 ## 🚀 Hadoop Setup
 Start the Hadoop services:
 
@@ -436,6 +445,7 @@ Verify the uploaded data:
 ```bash
 hdfs dfs -ls /data/churn/raw
 ```
+
 ## 🔮 Future Enhancements
 The project can be extended with:
 
@@ -454,6 +464,7 @@ Model explainability using SHAP
 CRM integration
 
 Real-time customer risk monitoring
+
 ## 📚 Key Learning Outcomes
 Through this project, I gained practical experience with:
 
@@ -468,6 +479,7 @@ Through this project, I gained practical experience with:
 - Model evaluation
 - Data visualization
 - Translating analytical results into business insights
+
 ## 👩‍💻 Author
 Chetana Muddulur
 
@@ -476,6 +488,7 @@ Computer Science & Engineering
 JSS Academy of Technical Education, Bengaluru
 
 GitHub: Chetana2502
+
 ## ⭐ Highlights
 ✓ End-to-end Big Data Analytics workflow
 
