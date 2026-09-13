@@ -1,0 +1,7 @@
+Python 3.x
+Java 8 or 11
+Hadoop 3.x
+Apache Spark 3.x
+PySpark
+Jupyter Notebook
+Ubuntu / WSL2
